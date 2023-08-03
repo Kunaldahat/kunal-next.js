@@ -17,8 +17,8 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.description}>
           <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.js</code>
+            Name - Kunal Dahat (Cloud/Devops Engineer)
+            {/* <code className={styles.code}>src/pages/index.js</code> */}
           </p>
           <div>
             <a
@@ -26,15 +26,15 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              By{' '}
+              {/* By{' '}
               <Image
                 src="/vercel.svg"
                 alt="Vercel Logo"
                 className={styles.vercelLogo}
                 width={100}
                 height={24}
-                priority
-              />
+                priority */}
+              {/* /> */}
             </a>
           </div>
         </div>
@@ -49,9 +49,10 @@ export default function Home() {
             priority
           />
           <div className={styles.thirteen}>
+            
             <Image
               src="/thirteen.svg"
-              alt="13"
+              alt="Resume"
               width={40}
               height={31}
               priority

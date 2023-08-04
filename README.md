@@ -1,45 +1,79 @@
-# Next.Js Website Tutorial: Create a Stunning Portfolio Website with Nextjs, Tailwind CSS and Framer-motion🌟
+Assignment 
 
-![GitHub stars](https://img.shields.io/github/stars/codebucks27/Next.js-Developer-Portfolio-Starter-Code?style=social&logo=ApacheSpark&label=Stars)&nbsp;&nbsp;
-![GitHub forks](https://img.shields.io/github/forks/codebucks27/Next.js-Developer-Portfolio-Starter-Code?style=social&logo=KashFlow&maxAge=3600)&nbsp;&nbsp;
-![Github Followers](https://img.shields.io/github/followers/codebucks27.svg?style=social&label=Follow)&nbsp;&nbsp;<br />
-
-This repository contains starter code for Portfolio website created using NextJs. <br />
-
-For Demo and Final Code checkout following link👇: <br />
-[Nextjs Portfolio Website](https://devdreaming.com//videos/nextjs-tutorial-build-portfolio-tailwind-css-framer-motion#code-links) <br />
-
-If you want to learn how to create it please follow below tutorial👇: <br />
-https://youtu.be/Yw7yWHigGKI <br />
-[![YouTube Video Views](https://img.shields.io/youtube/views/Yw7yWHigGKI?style=social)](https://youtu.be/Yw7yWHigGKI)<br />
-
-<h3 align="left">▶ Support me via:</h3><br />
-<p><a href="https://www.buymeacoffee.com/CodeBucks" target="_blank"> <img  src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg" height="50" width="210" alt="CodeBucks" ></img></a></p><br />
-
-### Images of The Portfolio Website:
-
-![Nextjs Portfolio Website](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/home-light-desktop.png)
-![Nextjs Portfolio Website Dark Mode](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/home-dark-desktop.png)
-![Next.js Portfolio Website](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/about-light-desktop.png)
-![Next js Portfolio Website](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/projects-dark-desktop.png)
-![Portfolio Website In Next.js](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/articles-light-desktop.png)
-![Responsive Portfolio Website In Nextjs](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/about-light-mobile.png)
-![Responsive Portfolio Website In Next js](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/projects-light-mobile.png)
-![Mobile Responsive Portfolio Website In Next.js](https://github.com/codebucks27/Next.js-Developer-Portfolio-Starter-Code/blob/main/website%20images/articles-light-mobile.png)
+Outline
+1. Search any publicly available Next.js sample application. This can be any static site build
+with Next.js. Backend is not really required.
+2. Clone this application code from step 1 in your GitHub repository.
+3. Deploy this application on AWS Amplify.
+a. Provision Amplify infrastructure using terraform.
+b. Setup CI/CD pipeline with Amplify’s inbuilt functionality.
+4. Create a detailed README file of the steps you followed for this setup.
+5. Submit the deployed application url and a link to your repository with a README file in it
+to HR Team.
+NOTE - You can submit whatever progress you have made at the end of 3 days from the date of
+receiving this assignment. Completing the assignment increases your chances of getting hired.
+*****************************************************************************************************
 
 
-### Resources Used in This Project
+LINK to deployed APP - https://main.d3mxvno3komwqt.amplifyapp.com/
 
-- Profile image in the home page created by using https://www.midjourney.com/ tool.
-- Profile image in the about page by [Albert Dera](https://unsplash.com/@albertdera?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 
-on [Unsplash](https://unsplash.com/photos/ILip77SbmOE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).
-- Fonts from https://fonts.google.com/ <br />
-- Icons from https://iconify.design/ <br />
-- LightBulb Svg from https://lukaszadam.com/illustrations <br />
-
-### External Libraries used in this project:
-
-- [framer-motion](https://www.framer.com/motion/) <br />
-- [Tailwind css](https://tailwindcss.com/) <br />
+Hands-On:
+1. Clone
+I found a sample next.js code on Google and cloned it in local system. Created new repositoryon github and pushed the code from local to new repository
+git clone <repo>
+git add .
+git commit -m "myapp"
+git push
 
 
+2. Creating Amplify infra using TERRFORM :
+(To understand it better firstly I manually deployed the APP once and then went for the terraform)
+
+Download and install Terraform in local system
+Download and install AWS CLI in local system
+Configure loacal system with AWS with command "aws configure" then by adding Secret ID and secret key.
+
+
+Wrote a config file - main.tf 
+The Configuration file is required because it tells terraform what resources to create on cloud platfoorm.
+>>
+
+provider "aws" {
+  region = "us-east-1"                  #seleted provider and regin as mumbai
+}
+
+resource "aws_amplify_app" "Kunal-Devops-app" {
+  name = "Kunal-Devops-app"             #defined my app name 
+
+}
+
+<<
+Command:
+terraform init
+terraform fmt
+terrafrom validate
+terraform apply
+
+![Alt text](image.png)  
+#Here the deployed app by name - Kunal-Devops-app in console via terraform.
+
+
+
+3. Setting CI/CD pipeline on Amplify to automated deployent on every push on github repository.
+
+Amplify suppoert builtin CICD pipeline and give many option, I selevted GitHub
+![Alt text](image-1.png)
+
+The the GitHub branch.
+![Alt text](image-2.png)
+
+Finally Clicked on Save & Deploy.
+
+Now, every time I push changes to the selected branch on your GitHub repository, Amplify will automatically trigger the CICD pipeline to deploy my app on AWS Amplify.
+
+Sucessfully completed the Assignment. It was very Intresting and challenging.
+My research skill helped me to achive this.
+
+Thanks.
+*************************************************************************************************
+LINK to deployed APP - https://main.d3mxvno3komwqt.amplifyapp.com/

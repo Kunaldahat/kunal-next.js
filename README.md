@@ -24,7 +24,7 @@ I found a sample next.js code on Google and cloned it in the local system. Creat
 git clone <repo> \
 git add . \
 git commit -m "myapp" \
-git push \
+git push 
 
 \
 \

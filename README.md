@@ -19,40 +19,35 @@ LINK to deployed APP - https://main.d3mxvno3komwqt.amplifyapp.com/
 
 Hands-On:
 1. Clone
-I found a sample next.js code on Google and cloned it in local system. Created new repositoryon github and pushed the code from local to new repository
-git clone <repo>
-git add .
-git commit -m "myapp"
-git push
+   
+I found a sample next.js code on Google and cloned it in the local system. Created a new repository on GitHub and pushed the code from local to the new repository \
+git clone <repo> \
+git add . \
+git commit -m "myapp" \
+git push \
 
-
+\
+\
 2. Creating Amplify infra using TERRFORM :
 (To understand it better firstly I manually deployed the APP once and then went for the terraform)
 
-Download and install Terraform in local system
-Download and install AWS CLI in local system
-Configure loacal system with AWS with command "aws configure" then by adding Secret ID and secret key.
+Download and install Terraform in local system \
+Download and install AWS CLI in local system \
+Configure loacal system with AWS with command "aws configure" then by adding Secret ID and secret key. 
 
 
-Wrote a config file - main.tf 
+Wrote a config file - main.tf  \
 The Configuration file is required because it tells terraform what resources to create on cloud platfoorm.
 >>
+![image](https://github.com/Kunaldahat/kunal-next.js/assets/96560952/3cd8b07e-4d92-46df-91dd-ff05fe9f7f11)
 
-provider "aws" {
-  region = "us-east-1"                  #seleted provider and regin as mumbai
-}
-
-resource "aws_amplify_app" "Kunal-Devops-app" {
-  name = "Kunal-Devops-app"             #defined my app name 
-
-}
 
 <<
-Command:
-terraform init
-terraform fmt
-terrafrom validate
-terraform apply
+Command: \
+terraform init \
+terraform fmt \
+terrafrom validate \
+terraform apply 
 
 ![Alt text](image.png)  
 #Here the deployed app by name - Kunal-Devops-app in console via terraform.
